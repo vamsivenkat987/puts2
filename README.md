@@ -1,1 +1,1 @@
-It gives result as addition between two numbers (int,float,negative)
+It gives result as subtraction between two numbers (int,float,negative)

@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'gives the subtraction between arg1 and arg2'
+    return 'gives the multiplication between arg1 and arg2'
 
 
 @app.route('/mul')

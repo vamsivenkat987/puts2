@@ -8,20 +8,20 @@ class calcuatorTestCase(unittest.TestCase):
         self.app = main.app.client()
 
     def integer(self):
-        arg1 =  self.app.get('/sub?A=7&B=5')
-        self.assertEqual(b'2 \n', arg1.data)
+        arg1 =  self.app.get('/mul?A=7&B=5')
+        self.assertEqual(b'35 \n', arg1.data)
         self.assertNotEqual(b'10.000 \n',arg1.data)
     def float(self):
-        arg2 =  self.app.get('/sub?A=5.9&B=2.3')
-        self.assertEqual(b'3.6 \n', arg2.data)
+        arg2 =  self.app.get('/mul?A=5.9&B=2.3')
+        self.assertEqual(b'13.57 \n', arg2.data)
         self.assertNotEqual(b'10.000 \n',arg2.data)
     def fraction(self):
-        arg3 =  self.app.get('/sub?A=8/3&B=3/8')
-        self.assertEqual(b'2.28 \n', arg3.data)
+        arg3 =  self.app.get('/mul?A=8/3&B=3/8')
+        self.assertEqual(b'0.99 \n', arg3.data)
         self.assertNotEqual(b'10.000 \n',arg3.data)
     def negative(self):
-        arg4=  self.app.get('/sub?A=5.1&B=-1.3')
-        self.assertEqual(b'6.4 \n', arg4.data)
+        arg4=  self.app.get('/mul?A=5.1&B=-1.3')
+        self.assertEqual(b'-6.63 \n', arg4.data)
         self.assertNotEqual(b'10.000 \n',arg4.data)
          
          
